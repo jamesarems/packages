@@ -162,9 +162,8 @@ Requires: iputils
 # zeromqX-devel:
 # Devel package brings libzmq.so symlink required by ffi-rzmq-core gem
 %if 0%{?rhel} == 8
-# TODO: fix when zeromq is available on EPEL 8
-# Requires: zeromq
-# Requires: libzmq.so.3 OR libzmq.so.5
+Requires: zeromq3
+Requires: zeromq3-devel
 Requires: pkgconfig(libzmq) >= 3.2
 %endif
 %if 0%{?rhel} == 7
